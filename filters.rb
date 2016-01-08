@@ -9,11 +9,7 @@ end
 
 def experienced?(candidate)
   #Returns true if the candidate has 2 years of experience or more
-  if (candidate[:years_of_experience] >= 2)
-    return true 
-  else 
-    return false 
-  end
+  return (candidate[:years_of_experience] >= 2)
 end
 
 # More methods will go below
@@ -37,35 +33,19 @@ end
 
 
 def more_than_100_points?(candidate)
-  if(candidate[:github_points] > 100)
-    return true
-  else
-    return false
-  end
+  return (candidate[:github_points] > 100)
 end
 
 def ruby_or_python?(candidate)
-  if candidate[:languages].include?("Ruby") || candidate[:languages].include?("Python")
-    return true
-  else
-    return false
-  end
+  return candidate[:languages].include?("Ruby") || candidate[:languages].include?("Python")
 end
 
 def applied_15_days?(candidate)
-  if days_ago_applied(candidate) <= 15
-    return true
-  else
-    return false
-  end
+  return days_ago_applied(candidate) <= 15
 end
 
 def older_than_17?(candidate)
-  if candidate[:age] > 17
-    return true
-  else 
-    return false 
-  end
+  return candidate[:age] > 17
 end 
 
 def order_by_qualifications
