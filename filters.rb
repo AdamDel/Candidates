@@ -1,6 +1,6 @@
 # In this file we define the methods to help filter out candidates
 # This way, we keep these methods separated from other potential parts of the program
-
+require 'colorize'
 candidates_to_check = @candidates
 
 def find(id)
@@ -55,7 +55,13 @@ end
 
 def menu
   loop do
-  puts "SELECTION: "
+  puts ""  
+  puts "-----COMMANDS------".colorize(:magenta)
+  puts "find id: finds the candidate with the id (ex. find 1)"
+  puts "qualified: displays qualified candidates"
+  puts "all: prints all candidates"
+  puts "quit: quits the program"
+  print "> "
   input = gets.chomp
 
   case input
